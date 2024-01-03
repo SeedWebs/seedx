@@ -1,0 +1,44 @@
+import { Inter as FontSans } from 'next/font/google';
+import { cn } from '@/app/lib/utils';
+import { Mode } from '@/app/components/Mode';
+import { getSetting } from '@/app/lib/api';
+import Header from '@/app/components/Header';
+import Script from 'next/script';
+import '@/app/global.css';
+
+export const fontSans = FontSans({
+  subsets: ['latin'],
+  variable: '--font-sans',
+});
+
+export async function generateMetadata() {
+  const site = await getSetting();
+  return {
+    title: site.title,
+    description: site.description,
+  };
+}
+
+export default function RootLayout({ children }) {
+  return (
+    <html lang='en' suppressHydrationWarning>
+      <body
+        className={cn(
+          'min-h-screen bg-slate-100 font-sans antialiased dark:bg-slate-950',
+          fontSans.variable,
+        )}
+      >
+        <Mode
+          attribute='class'
+          defaultTheme='system'
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Header />
+          {children}
+        </Mode>
+        <Script id='nav' src='/js/nav.js' />
+      </body>
+    </html>
+  );
+}
