@@ -18,14 +18,14 @@ export default async function Header() {
   ];
 
   return (
-    <header className='fixed top-0 flex flex-wrap md:justify-start md:flex-nowrap md:top-2 md:px-4 z-50 w-full'>
+    <header className='fixed top-0 z-50 flex w-full flex-wrap md:top-2 md:flex-nowrap md:justify-start md:px-4'>
       <nav
-        className='relative md:max-w-max min-h-11 w-full bg-white/90 rounded-[22px] mt-3 mx-2 px-5 shadow-md shadow-gray-800/5 ring-1 ring-gray-900/5 backdrop-blur md:flex md:items-center md:justify-between md:rounded-full md:py-0 md:px-6 md:mx-auto dark:bg-slate-700/80'
+        className='relative mx-2 mt-3 min-h-11 w-full rounded-[22px] bg-white/90 px-5 shadow-md shadow-gray-800/5 ring-1 ring-gray-900/5 backdrop-blur md:mx-auto md:flex md:max-w-max md:items-center md:justify-between md:rounded-full md:px-6 md:py-0 dark:bg-slate-700/80'
         aria-label='Global'
       >
-        <div className='flex items-center justify-between min-h-11'>
+        <div className='flex min-h-11 items-center justify-between'>
           <Link
-            className='flex items-center gap-2  md:text-xl font-medium dark:text-white'
+            className='flex items-center gap-2 font-bold md:text-xl dark:text-white'
             href='/'
             aria-label='Brand'
           >
@@ -43,7 +43,7 @@ export default async function Header() {
                 src={logo_dark}
                 width={24}
                 height={24}
-                alt={`${site.title} Logo`}
+                alt={`${site.title} Logo - Dark Mode`}
                 className='-ml-1 hidden dark:inline-flex'
               />
             )}
@@ -51,18 +51,18 @@ export default async function Header() {
           </Link>
           <button
             id='navtoggle'
-            className='md:hidden relative w-6 h-6'
+            className='relative h-6 w-6 md:hidden'
             title='Toggle Menu'
           >
-            <Menu className='absolute transition-all top-0  pointer-events-none i-open' />
-            <X className='absolute transition-all top-0 pointer-events-none i-close opacity-0' />
+            <Menu className='i-open pointer-events-none absolute  top-0 transition-all' />
+            <X className='i-close pointer-events-none absolute top-0 opacity-0 transition-all' />
           </button>
         </div>
         <div
           id='nav'
-          className='max-h-0 md:max-h-none overflow-hidden transition-all duration-600 basis-full grow md:block'
+          className='duration-600 max-h-0 grow basis-full overflow-hidden transition-all md:block md:max-h-none'
         >
-          <div className='flex flex-col gap-y-4 gap-x-0 mt-2 mb-4 md:my-0 md:flex-row md:items-center md:justify-end md:gap-y-0 md:gap-x-7 md:mt-0 md:pl-8 '>
+          <div className='mb-4 mt-2 flex flex-col gap-x-0 gap-y-4 md:my-0 md:mt-0 md:flex-row md:items-center md:justify-end md:gap-x-7 md:gap-y-0 md:pl-8 '>
             {nav.map((item) => (
               <Link
                 key={item.name}

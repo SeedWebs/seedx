@@ -35,7 +35,7 @@ export default function Card({ post }) {
         <div className='flex items-center gap-2 text-gray-600 dark:text-gray-400'>
           <Image
             src={avatar}
-            alt={post.author.title}
+            alt={post.author.first_name}
             width={28}
             height={28}
             className='aspect-square rounded-full object-cover'

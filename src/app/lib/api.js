@@ -1,5 +1,5 @@
 async function getData(apiurl) {
-  const sec = parseInt(process.env.REVALIDATE_SEC) || 10;
+  const sec = parseInt(process.env.REVALIDATE_SEC) || 20;
   const res = await fetch(apiurl, {
     next: { revalidate: sec },
   });
