@@ -17,7 +17,7 @@ export default async function LatestBlog() {
           partners.
         </p>
       </div>
-      <div className='mx-auto grid  max-w-[1120px] grid-cols-3 gap-4 md:gap-5'>
+      <div className='mx-auto grid  max-w-[1120px] gap-4 md:grid-cols-3 md:gap-5'>
         {posts.length > 0 &&
           posts.map((post) => <Card post={post} key={post.id} />)}
       </div>

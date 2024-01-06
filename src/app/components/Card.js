@@ -15,7 +15,7 @@ export default function Card({ post }) {
 
   return (
     <article
-      className='overflow-hidden rounded-md bg-white shadow-sm dark:bg-slate-800'
+      className='max-w-[480px] overflow-hidden rounded-md bg-white shadow-sm dark:bg-slate-800'
       key={post.id}
     >
       <Link href={url}>
@@ -24,7 +24,7 @@ export default function Card({ post }) {
           alt={post.cover.title}
           width={360}
           height={189}
-          className='aspect-[120/63] object-cover'
+          className='aspect-[120/63] w-full object-cover'
         />
       </Link>
       <div className='p-4'>
