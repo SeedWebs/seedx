@@ -1,7 +1,6 @@
-import Link from 'next/link';
-import Image from 'next/image';
 import Card from '@/app/components/Card';
 import { getPosts } from '@/app/lib/api';
+
 export default async function LatestBlog() {
   const posts = await getPosts(3);
 
