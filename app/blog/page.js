@@ -1,5 +1,5 @@
-import Card from '@/app/components/Card';
-import { getPosts } from '@/app/lib/api';
+import Card from '../components/Card';
+import { getPosts } from '../lib/api';
 
 export default async function Blog() {
   const posts = await getPosts(9);

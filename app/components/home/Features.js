@@ -1,29 +1,29 @@
-import { Camera } from 'lucide-react';
+import { Fan, Database, Palette, Globe } from 'lucide-react';
 export default async function Features() {
   const features = [
     {
       name: 'Next.js Frontend Templates',
       description:
         'Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi. Odio urna massa nunc massa.',
-      icon: Camera,
+      icon: Fan,
     },
     {
       name: 'Directus Backend Template',
       description:
         'Sit quis amet rutrum tellus ullamcorper ultricies libero dolor eget. Sem sodales gravida quam turpis enim lacus amet.',
-      icon: Camera,
+      icon: Database,
     },
     {
       name: 'Design and Deploy',
       description:
         'Quisque est vel vulputate cursus. Risus proin diam nunc commodo. Lobortis auctor congue commodo diam neque.',
-      icon: Camera,
+      icon: Palette,
     },
     {
       name: 'Preview and Publish',
       description:
         'Arcu egestas dolor vel iaculis in ipsum mauris. Tincidunt mattis aliquet hac quis. Id hac maecenas ac donec pharetra eget.',
-      icon: Camera,
+      icon: Globe,
     },
   ];
   return (

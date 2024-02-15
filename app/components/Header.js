@@ -1,8 +1,8 @@
 import Link from 'next/link';
-import Nav from '@/app/components/Nav';
-import ModeToggle from '@/app/components/ModeToggle';
+import Nav from './Nav';
+import ModeToggle from './ModeToggle';
 import { Menu, X } from 'lucide-react';
-import { getSetting } from '@/app/lib/api';
+import { getSetting } from '../lib/api';
 
 export default async function Header() {
   const site = await getSetting();

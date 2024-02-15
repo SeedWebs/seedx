@@ -2,16 +2,20 @@
 
 The Open Source Starter Site by Seed Webs.
 
+## Demo
+
+**[seedx.seedwebs.com](https://seedx.seedwebs.com/)**
+
 ## Frontend
 
-- Next.js
-- Tailwind CSS
-- shadcn/ui
-- Lucide Icons
+- [Next.js](https://nextjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [shadcn/ui](https://ui.shadcn.com/)
+- [Lucide Icons](https://lucide.dev/)
 
 ## Headless CMS
 
-- Directus
+- [Directus](https://directus.io/)
 
 ## License
 

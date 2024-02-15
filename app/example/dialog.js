@@ -1,5 +1,5 @@
 'use client';
-import { Button } from '@/app/components/ui/button';
+import { Button } from '../components/ui/button';
 import {
   Dialog,
   DialogContent,
@@ -7,7 +7,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from '@/app/components/ui/dialog';
+} from '../components/ui/dialog';
 
 export default function DialogDemo() {
   return (

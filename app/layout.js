@@ -1,10 +1,10 @@
 import { Inter as FontSans } from 'next/font/google';
-import { cn } from '@/app/lib/utils';
-import { Mode } from '@/app/components/Mode';
-import { getSetting } from '@/app/lib/api';
-import Header from '@/app/components/Header';
+import { cn } from './lib/utils';
+import { Mode } from './components/Mode';
+import { getSetting } from './lib/api';
+import Header from './components/Header';
 import Script from 'next/script';
-import '@/app/global.css';
+import '@/global.css';
 
 export const fontSans = FontSans({
   subsets: ['latin'],

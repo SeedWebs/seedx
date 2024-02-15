@@ -1,7 +1,8 @@
-import { getPage } from '@/app/lib/api';
+import { getPost } from '../../lib/api';
 
-export default async function Page({ params }) {
-  const page = await getPage(params.slug);
+export default async function Post({ params }) {
+  const post = await getPost(params.slug);
+  const page = post[0];
   if (!page) {
     return {
       notFound: true,

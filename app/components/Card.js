@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import Date from '@/app/components/Date';
+import Date from './Date';
 export default function Card({ post }) {
   const asset = process.env.API_DOMAIN + '/assets';
   const url = '/blog/' + post.slug;

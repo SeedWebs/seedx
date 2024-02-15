@@ -1,16 +1,16 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { getHome } from '@/app/lib/api';
-import { Button } from '@/app/components/ui/button';
+import { getHome } from './lib/api';
+import { Button } from './components/ui/button';
 import {
   IC_nextjs,
   IC_tailwindcss,
   IC_shadcn,
   IC_directus,
   IC_seedwebs,
-} from '@/app/lib/icons';
-import Features from '@/app/components/Features';
-import LatestBlog from '@/app/components/LatestBlog';
+} from './lib/icons';
+import Features from './components/home/Features';
+import LatestBlog from './components/home/LatestBlog';
 
 export default async function Home() {
   const home = await getHome();

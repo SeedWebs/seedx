@@ -3,7 +3,7 @@
 import * as React from 'react';
 import { Moon, Sun } from 'lucide-react';
 import { useTheme } from 'next-themes';
-import { Button } from '@/app/components/ui/button';
+import { Button } from './ui/button';
 
 export default function ModeToggle() {
   const { setTheme } = useTheme();
@@ -14,7 +14,7 @@ export default function ModeToggle() {
         variant='outline'
         size='icon'
         onClick={() => setTheme('dark')}
-        className='rounded-full dark:hidden md:border-none'
+        className='rounded-full bg-transparent hover:bg-white dark:hidden md:border-none'
       >
         <Sun className='h-[1.2rem] w-[1.2rem]' />
         <span className='sr-only'>Switch to Dark Mode</span>
@@ -23,7 +23,7 @@ export default function ModeToggle() {
         variant='ghost'
         size='icon'
         onClick={() => setTheme('light')}
-        className='hidden rounded-full dark:inline-flex dark:hover:bg-slate-900'
+        className='hidden rounded-full border border-slate-500 dark:inline-flex dark:hover:bg-slate-900'
       >
         <Moon className='h-[1.2rem] w-[1.2rem]' />
         <span className='sr-only'>Switch to Light Mode</span>
