@@ -23,7 +23,7 @@ export default function ModeToggle() {
         variant='ghost'
         size='icon'
         onClick={() => setTheme('light')}
-        className='hidden rounded-full border border-slate-500 dark:inline-flex dark:hover:bg-slate-900'
+        className='hidden rounded-full border border-slate-500 dark:inline-flex dark:hover:bg-slate-800 lg:border-none'
       >
         <Moon className='h-[1.2rem] w-[1.2rem]' />
         <span className='sr-only'>Switch to Light Mode</span>

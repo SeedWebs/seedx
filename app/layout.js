@@ -38,6 +38,11 @@ export default function RootLayout({ children }) {
           {children}
         </Mode>
         <Script id='nav' src='/js/nav.js' />
+        <Script
+          defer
+          data-domain='seedx.seedwebs.com'
+          src='https://stat.seedwebs.com/js/script.js'
+        />
       </body>
     </html>
   );
