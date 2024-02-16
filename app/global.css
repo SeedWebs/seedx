@@ -4,12 +4,12 @@
 
 @media (max-width: 767px) {
   .nav-open #nav {
-    max-height: 100vh;
+    @apply max-h-screen overflow-y-auto;
   }
   .nav-open .i-close {
-    opacity: 1;
+    @apply opacity-100;
   }
   .nav-open .i-open {
-    opacity: 0;
+    @apply opacity-0;
   }
 }

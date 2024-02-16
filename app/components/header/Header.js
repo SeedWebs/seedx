@@ -1,17 +1,12 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import Nav from './Nav';
 import ModeToggle from './ModeToggle';
 import { Menu, X } from 'lucide-react';
-import { getSetting } from '../lib/api';
+import { getSetting } from '@/lib/api';
 
 export default async function Header() {
   const site = await getSetting();
-  const logo_light = site.logo_light
-    ? process.env.API_DOMAIN + '/assets/' + site.logo_light
-    : null;
-  const logo_dark = site.logo_dark
-    ? process.env.API_DOMAIN + '/assets/' + site.logo_dark
-    : null;
   const nav = [
     { name: 'Example', link: '/example' },
     { name: 'Blog', link: '/blog' },
@@ -21,33 +16,29 @@ export default async function Header() {
   return (
     <header className='fixed top-0 z-50 flex w-full flex-wrap md:top-2 md:flex-nowrap md:justify-start md:px-4'>
       <nav
-        className='relative mx-2 mt-3 min-h-11 w-full rounded-[22px] bg-white/90 px-5 shadow-md shadow-gray-800/5 ring-1 ring-gray-900/5 backdrop-blur dark:bg-slate-700/80 md:mx-auto md:flex md:max-w-max md:items-center md:justify-between md:rounded-full md:px-6 md:py-0'
+        className='relative mx-2 mt-3 w-full rounded-3xl border border-white bg-white/85 px-5 shadow-md shadow-slate-600/5 ring-1 ring-slate-600/5 backdrop-blur dark:border-slate-700 dark:bg-slate-700/80 md:mx-auto md:flex md:max-w-max md:items-center md:justify-between md:rounded-full  md:py-0'
         aria-label='Global'
       >
-        <div className='flex min-h-11 items-center justify-between'>
+        <div className='flex min-h-11 shrink-0 items-center justify-between'>
           <Link
-            className='flex items-center gap-2 font-bold dark:text-white md:text-xl'
+            className='flex shrink-0 items-center gap-2 font-bold dark:text-white md:text-xl'
             href='/'
             aria-label='Brand'
           >
-            {logo_light && (
-              <img
-                src={logo_light}
-                width={24}
-                height={24}
-                alt={`${site.title} Logo`}
-                className='-ml-1 dark:hidden'
-              />
-            )}
-            {logo_dark && (
-              <img
-                src={logo_dark}
-                width={24}
-                height={24}
-                alt={`${site.title} Logo - Dark Mode`}
-                className='-ml-1 hidden dark:inline-flex'
-              />
-            )}
+            <Image
+              src='/img/logo.svg'
+              alt='Logo'
+              width={24}
+              height={24}
+              className='dark:hidden'
+            />
+            <Image
+              src='/img/logo_dark.svg'
+              alt='Logo (Dark Mode)'
+              width={24}
+              height={24}
+              className='hidden dark:block'
+            />
             {site.title}
           </Link>
           <button

@@ -1,9 +1,10 @@
-import { Inter as FontSans } from 'next/font/google';
-import { cn } from './lib/utils';
-import { Mode } from './components/Mode';
-import { getSetting } from './lib/api';
-import Header from './components/Header';
 import Script from 'next/script';
+import Header from '@/components/header/Header';
+import Footer from '@/components/Footer';
+import { Inter as FontSans } from 'next/font/google';
+import { cn } from '@/lib/utils';
+import { Mode } from '@/components/header/Mode';
+import { getSetting } from '@/lib/api';
 import '@/global.css';
 
 export const fontSans = FontSans({
@@ -14,8 +15,8 @@ export const fontSans = FontSans({
 export async function generateMetadata() {
   const site = await getSetting();
   return {
-    title: site.title,
-    description: site.description,
+    title: site.seo_title,
+    description: site.seo_description,
   };
 }
 
@@ -24,7 +25,7 @@ export default function RootLayout({ children }) {
     <html lang='en' suppressHydrationWarning>
       <body
         className={cn(
-          'min-h-screen bg-slate-100 font-sans antialiased dark:bg-slate-950',
+          'flex min-h-screen flex-col bg-slate-100 font-sans antialiased dark:bg-slate-950',
           fontSans.variable,
         )}
       >
@@ -36,6 +37,7 @@ export default function RootLayout({ children }) {
         >
           <Header />
           {children}
+          <Footer />
         </Mode>
         <Script id='nav' src='/js/nav.js' />
         <Script

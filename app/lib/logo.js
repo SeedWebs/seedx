@@ -1,6 +1,6 @@
 import React from 'react';
 
-export function IC_nextjs() {
+export function Nextjs() {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -26,7 +26,7 @@ export function IC_nextjs() {
     </svg>
   );
 }
-export function IC_tailwindcss() {
+export function Tailwindcss() {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -45,7 +45,7 @@ export function IC_tailwindcss() {
   );
 }
 
-export function IC_shadcn() {
+export function Shadcn() {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -67,7 +67,7 @@ export function IC_shadcn() {
     </svg>
   );
 }
-export function IC_directus() {
+export function Directus() {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -89,7 +89,7 @@ export function IC_directus() {
     </svg>
   );
 }
-export function IC_seedwebs() {
+export function Seedwebs() {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'

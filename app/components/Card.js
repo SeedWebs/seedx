@@ -15,7 +15,7 @@ export default function Card({ post }) {
 
   return (
     <article
-      className='max-w-[480px] overflow-hidden rounded-md bg-white shadow-sm dark:bg-slate-800'
+      className='w-full overflow-hidden rounded-md bg-white shadow-sm dark:bg-slate-800'
       key={post.id}
     >
       <Link href={url}>
